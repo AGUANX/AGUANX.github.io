@@ -1,8 +1,10 @@
 $('#login-button').click(function (event) {
-    let userName=document.getElementById("userName").value;
-    let pwd=document.getElementById("pwd").value;
+    let userName=hex_md5(document.getElementById("userName").value);
+    let pwd=hex_md5(document.getElementById("pwd").value);
+    console.log(userName);
+    console.log(pwd);
     //修改密码请改此处
-    if(userName=="张大牙" &&  pwd=="19980513"){
+    if(userName=="1890e08432f12b178e9968c01e0378c1" &&  pwd=="6aa55ed4232d6476ff27cd6d9bb89689"){
         event.preventDefault();
         //$('login').fadeOut(500);
         //$('.big-box').addClass('form-success');
