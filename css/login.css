@@ -2,14 +2,25 @@
   user-select: none;
   /* 无法选中,整体感更强 */
 }
-body {
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-attachment:fixed;
+/* 小屏幕手机端 */
+@media (min-width: 0px) and (max-width:768px) {
+  body {
+    background-image: url(../img/minbg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment:fixed;
+  }
 }
 
-
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 768px) and (max-width:9999px) {
+  body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment:fixed;
+  }
+}
 
 .login {
   position: fixed;
