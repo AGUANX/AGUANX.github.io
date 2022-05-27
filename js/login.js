@@ -8,7 +8,7 @@ $('#login-button').click(function (event) {
         //$('.big-box').addClass('form-success');
         //requestFullScreen();  全屏
         setTimeout(function(){
-            location.href="index1.html";
+            location.href="skystar.html";
         },500);
     }
     else{
