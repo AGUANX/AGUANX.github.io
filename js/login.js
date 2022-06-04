@@ -6,10 +6,10 @@ $('#login-button').click(function (event) {
         event.preventDefault();
         //$('login').fadeOut(500);
         //$('.big-box').addClass('form-success');
-        //requestFullScreen();  全屏
+        //requestFullScreen();  //全屏
         setTimeout(function(){
             location.href="skystar.html";
-        },500);
+        },1000);
     }
     else{
         alert("Wrong Password");

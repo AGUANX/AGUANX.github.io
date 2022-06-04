@@ -68,7 +68,26 @@ function randomNum(min,max){
     var num = (Math.random()*(max-min+1)+min).toFixed(2);
     return num;
 }
+
+function requestFullScreen(element) {
+    var element=document.documentElement;
+    var requestMethod = element.requestFullScreen || //W3C
+        element.webkitRequestFullScreen || //Chrome等
+        element.mozRequestFullScreen || //FireFox
+        element.msRequestFullScreen; //IE11
+    if (requestMethod) {
+        requestMethod.call(element);
+    }
+    else if (typeof window.ActiveXObject !== "undefined") {//for Internet Explorer
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
+}
+
 function init(){
+    requestFullScreen();
     let container = document.querySelector('.container');
     let f = document.createDocumentFragment();
     words.forEach(w=>{
@@ -92,7 +111,10 @@ function init(){
     })
     container.appendChild(f);
 }
+
+
 window.addEventListener('load',init);
+
 
 
  
