@@ -19,7 +19,14 @@ sky.addEventListener('click',function (){
 
 const cat = document.getElementById('cat');
 cat.addEventListener('click',function (){
-    setTimeout(function(){
+   // setTimeout(function(){
         location.href="cat/第一节/第一节.html";
+   // },500);
+})
+
+const happy = document.getElementById('happy');
+happy.addEventListener('click',function (){
+    setTimeout(function(){
+        location.href="happy.html";
     },500);
 })
