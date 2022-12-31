@@ -30,3 +30,11 @@ happy.addEventListener('click',function (){
         location.href="happy.html";
     },500);
 })
+
+const yanhua = document.getElementById('yanhua');
+yanhua.addEventListener('click',function (){
+    setTimeout(function(){
+        location.href="newyear/index.html";
+    },500);
+})
+
